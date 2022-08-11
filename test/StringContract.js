@@ -29,7 +29,7 @@ contract('StringContract', function () {
     });
     
     it('deploys a contract', async () => {
-        const StringContractManager = await StringContract.methods.getManager().call();
+        const StringContractManager = await StringContract.methods.manager().call();
         assert.equal(manager, StringContractManager, 'The manager is the one who launches the smart contract.');
     });
 

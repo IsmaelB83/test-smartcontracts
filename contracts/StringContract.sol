@@ -9,10 +9,6 @@ contract StringContract {
         manager = msg.sender;
     }
 
-    function getManager() public view returns(address) {
-        return manager;
-    }
-
     function subString(string memory str, uint startIndex, uint endIndex) public pure returns(string memory) {
         bytes memory strBytes = bytes(str);
         bytes memory result = new bytes(endIndex-startIndex);
